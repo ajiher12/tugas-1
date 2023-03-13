@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('jadwals', function (Blueprint $table) {
             $table->id();
-
             $table->string('hari');
             $table->boolean('is_active')->default(false);
             $table->timestamps();
@@ -26,5 +25,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('jadwals');
+
     }
 };
