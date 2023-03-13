@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jadwals', function (Blueprint $table) {
+        Schema::create('pic_mobils', function (Blueprint $table) {
             $table->id();
 
-            $table->string('hari');
-            $table->boolean('is_active')->default(false);
+            $table->string('nama_pic');
+            $table->string('detail_pic');
+            $table->string('status_aktif');
+            $table->string('img');
             $table->timestamps();
         });
     }
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('jadwals');
+        Schema::dropIfExists('pic_mobils');
     }
 };
